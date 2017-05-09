@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function arrayNew(arrs){
+        var  newArray = [];
+        for(var i=0;i<arrs.length;i++){
+            if(newArray.indexOf){
+                if(newArray.indexOf(arrs[i])==-1){newArray.push(arrs[i])}
+            }  else{
+                if(indexOf(arrs[i],newArray)==-1){newArray.push(arrs[i])}
+            }
+        }
+        return newArray
+    }
+    var num = [4,5,2,2,6,2,8,6];
+    arrayNew(num);
+    console.log(num.length);
+
+
+
+
+
+
+
+
+    /*----------------------------------第二种-----------------------------------------*/
+    function array(arrs){
+        var newArray = [];
+        var obj={};
+        if(arrs.length>0){
+            for(var i=0;i<arrs.length;i++){
+                if(!obj[arrs[i]]){
+                    obj[arrs[i]]=1;
+                    newArray.push(arrs[i]);
+                }else{
+                    console.log(obj[arrs[i]]);
+                }
+            }
+        }
+        return newArray;
+    }
+    var arrs = [4,5,2,2,6,2,8,6];
+    array(arrs);
+    console.log(arrs.length);
+    console.log(array(arrs))
+</script>
+</body>
+</html>
